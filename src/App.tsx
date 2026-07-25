@@ -1135,7 +1135,7 @@ export default function App() {
                   onClick={() => {
                     setShowUpsellModal(true);
                   }}
-                  className="block w-full py-4 rounded-xl bg-white hover:bg-sand-light border-2 border-white text-[#09261a] font-extrabold text-sm tracking-wider uppercase transition-all duration-300 hover:scale-[1.01] active:scale-[0.99] text-center cursor-pointer shadow-sm"
+                  className="block w-full py-4 rounded-xl bg-[#09261a] hover:bg-white hover:text-[#09261a] border-2 border-white text-white font-extrabold text-sm tracking-wider uppercase transition-all duration-300 hover:scale-[1.01] active:scale-[0.99] text-center cursor-pointer shadow-sm"
                   id="checkout-plan-basico"
                 >
                   Quiero el Plan Básico ➔
