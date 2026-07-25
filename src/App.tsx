@@ -31,8 +31,8 @@ const bundleImgAvif = "https://res.cloudinary.com/dgncwrnvw/image/upload/v178490
 const bundleImgWebp = "https://res.cloudinary.com/dgncwrnvw/image/upload/v1784904904/ChatGPT_Image_3_lug_2026_10_57_05_ix0vsb.webp";
 const bundleImgPng = "https://i.ibb.co/KxVLBT9R/Chat-GPT-Image-18-lug-2026-17-18-49.png";
 
-const protocolImgAvif = "https://res.cloudinary.com/dgncwrnvw/image/upload/v1784895823/ChatGPT_Image_20_lug_2026_15_16_38_abj4bv.avif";
-const protocolImgWebp = "https://res.cloudinary.com/dgncwrnvw/image/upload/v1784895823/ChatGPT_Image_20_lug_2026_15_16_38_xnpysb.webp";
+const protocolImgAvif = "https://res.cloudinary.com/dgncwrnvw/image/upload/v1784985719/ChatGPT_Image_25_lug_2026_10_19_01_agnrr5.avif";
+const protocolImgWebp = "https://res.cloudinary.com/dgncwrnvw/image/upload/v1784985785/ChatGPT_Image_25_lug_2026_10_19_01_rm0ob4.webp";
 const protocolImgPng = "https://i.ibb.co/hJZNX1mh/Chat-GPT-Image-15-lug-2026-22-41-37.png";
 
 // ============================================================================
@@ -84,21 +84,21 @@ const defaultCurrency: CurrencyInfo = {
   upsell: "10",
   protocolo: "27",
   protocoloOriginal: "59",
-  protocoloDownsell: "17"
+  protocoloDownsell: "10"
 };
 
 /**
  * Dictionary mapping regional ISO 3166-1 alpha-2 country codes to localized values.
  */
 const currencyMap: Record<string, CurrencyInfo> = {
-  MX: { code: "MXN", symbol: "$", basico: "95", completo: "285", basicoOriginal: "550", completoOriginal: "1200", bono1: "285", bono2: "190", bono3: "228", bono4: "285", bono5: "228", bono6: "342", bono7: "190", bonosTotal: "1748", upsell: "190", protocolo: "513", protocoloOriginal: "1100", protocoloDownsell: "323" }, // Mexico
-  CO: { code: "COP", symbol: "$", basico: "20.000", completo: "60.000", basicoOriginal: "120.000", completoOriginal: "260.000", bono1: "60.000", bono2: "40.000", bono3: "48.000", bono4: "60.000", bono5: "48.000", bono6: "72.000", bono7: "40.000", bonosTotal: "368.000", upsell: "40.000", protocolo: "108.000", protocoloOriginal: "230.000", protocoloDownsell: "68.000" }, // Colombia
-  CL: { code: "CLP", symbol: "$", basico: "4.700", completo: "14.000", basicoOriginal: "27.000", completoOriginal: "60.000", bono1: "14.000", bono2: "9.300", bono3: "11.000", bono4: "14.000", bono5: "11.000", bono6: "16.750", bono7: "9.300", bonosTotal: "85.350", upsell: "9.300", protocolo: "25.200", protocoloOriginal: "54.000", protocoloDownsell: "15.800" }, // Chile
-  PE: { code: "PEN", symbol: "S/.", basico: "18.5", completo: "55", basicoOriginal: "110", completoOriginal: "240", bono1: "55", bono2: "37", bono3: "44", bono4: "55", bono5: "44", bono6: "66.5", bono7: "37", bonosTotal: "338.5", upsell: "37", protocolo: "100", protocoloOriginal: "215", protocoloDownsell: "63" }, // Peru
-  AR: { code: "ARS", symbol: "$", basico: "4.500", completo: "13.500", basicoOriginal: "26.000", completoOriginal: "58.000", bono1: "13.500", bono2: "9.000", bono3: "10.800", bono4: "13.500", bono5: "10.800", bono6: "16.200", bono7: "9.000", bonosTotal: "82.800", upsell: "9.000", protocolo: "24.300", protocoloOriginal: "52.000", protocoloDownsell: "15.300" }, // Argentina
-  BR: { code: "BRL", symbol: "R$", basico: "28", completo: "85", basicoOriginal: "160", completoOriginal: "350", bono1: "85", bono2: "56", bono3: "68", bono4: "85", bono5: "68", bono6: "100", bono7: "56", bonosTotal: "518", upsell: "56", protocolo: "150", protocoloOriginal: "320", protocoloDownsell: "95" }, // Brazil
-  ES: { code: "EUR", symbol: "€", basico: "5", completo: "15", basicoOriginal: "29", completoOriginal: "64", bono1: "15", bono2: "10", bono3: "12", bono4: "15", bono5: "12", bono6: "18", bono7: "10", bonosTotal: "92", upsell: "10", protocolo: "27", protocoloOriginal: "59", protocoloDownsell: "17" }, // Spain
-  UY: { code: "UYU", symbol: "$U", basico: "215", completo: "650", basicoOriginal: "1250", completoOriginal: "2750", bono1: "650", bono2: "430", bono3: "520", bono4: "650", bono5: "520", bono6: "770", bono7: "430", bonosTotal: "3.970", upsell: "430", protocolo: "1.170", protocoloOriginal: "2.500", protocoloDownsell: "730" }, // Uruguay
+  MX: { code: "MXN", symbol: "$", basico: "95", completo: "285", basicoOriginal: "550", completoOriginal: "1200", bono1: "285", bono2: "190", bono3: "228", bono4: "285", bono5: "228", bono6: "342", bono7: "190", bonosTotal: "1748", upsell: "190", protocolo: "513", protocoloOriginal: "1100", protocoloDownsell: "190" }, // Mexico
+  CO: { code: "COP", symbol: "$", basico: "20.000", completo: "60.000", basicoOriginal: "120.000", completoOriginal: "260.000", bono1: "60.000", bono2: "40.000", bono3: "48.000", bono4: "60.000", bono5: "48.000", bono6: "72.000", bono7: "40.000", bonosTotal: "368.000", upsell: "40.000", protocolo: "108.000", protocoloOriginal: "230.000", protocoloDownsell: "40.000" }, // Colombia
+  CL: { code: "CLP", symbol: "$", basico: "4.700", completo: "14.000", basicoOriginal: "27.000", completoOriginal: "60.000", bono1: "14.000", bono2: "9.300", bono3: "11.000", bono4: "14.000", bono5: "11.000", bono6: "16.750", bono7: "9.300", bonosTotal: "85.350", upsell: "9.300", protocolo: "25.200", protocoloOriginal: "54.000", protocoloDownsell: "9.300" }, // Chile
+  PE: { code: "PEN", symbol: "S/.", basico: "18.5", completo: "55", basicoOriginal: "110", completoOriginal: "240", bono1: "55", bono2: "37", bono3: "44", bono4: "55", bono5: "44", bono6: "66.5", bono7: "37", bonosTotal: "338.5", upsell: "37", protocolo: "100", protocoloOriginal: "215", protocoloDownsell: "37" }, // Peru
+  AR: { code: "ARS", symbol: "$", basico: "4.500", completo: "13.500", basicoOriginal: "26.000", completoOriginal: "58.000", bono1: "13.500", bono2: "9.000", bono3: "10.800", bono4: "13.500", bono5: "10.800", bono6: "16.200", bono7: "9.000", bonosTotal: "82.800", upsell: "9.000", protocolo: "24.300", protocoloOriginal: "52.000", protocoloDownsell: "9.000" }, // Argentina
+  BR: { code: "BRL", symbol: "R$", basico: "28", completo: "85", basicoOriginal: "160", completoOriginal: "350", bono1: "85", bono2: "56", bono3: "68", bono4: "85", bono5: "68", bono6: "100", bono7: "56", bonosTotal: "518", upsell: "56", protocolo: "150", protocoloOriginal: "320", protocoloDownsell: "56" }, // Brazil
+  ES: { code: "EUR", symbol: "€", basico: "5", completo: "15", basicoOriginal: "29", completoOriginal: "64", bono1: "15", bono2: "10", bono3: "12", bono4: "15", bono5: "12", bono6: "18", bono7: "10", bonosTotal: "92", upsell: "10", protocolo: "27", protocoloOriginal: "59", protocoloDownsell: "10" }, // Spain
+  UY: { code: "UYU", symbol: "$U", basico: "215", completo: "650", basicoOriginal: "1250", completoOriginal: "2750", bono1: "650", bono2: "430", bono3: "520", bono4: "650", bono5: "520", bono6: "770", bono7: "430", bonosTotal: "3.970", upsell: "430", protocolo: "1.170", protocoloOriginal: "2.500", protocoloDownsell: "430" }, // Uruguay
   US: defaultCurrency,
 };
 
@@ -362,11 +362,11 @@ export default function App() {
             ¿Estás Seguro de Dejar Pasar Esto?
           </h1>
           <p className="text-gold-dark italic font-semibold text-base sm:text-lg md:text-xl text-center mb-4 md:mb-6">
-            Tu Plan de Acción Diario Listo para Usar — Último Intento de Descuento
+            Mapa de Digitopuntura — Último Intento de Descuento
           </p>
 
           <p className="text-xs sm:text-sm md:text-base text-gray-600 leading-relaxed text-center max-w-2xl mx-auto mb-6 md:mb-10 px-2">
-            No limites tus conocimientos a la pura teoría del manual. Consigue el <strong className="text-red-700">Protocolo de 21 Días</strong> ahora mismo para aplicar de inmediato sin esfuerzo mental de planificación. Esta oferta exclusiva de un solo clic nunca volverá a estar disponible para ti.
+            No limites tus conocimientos a la pura teoría del manual. Consigue el <strong className="text-red-700">Mapa de Digitopuntura</strong> ahora mismo para aplicar digitopuntura de forma fácil y segura, utilizando únicamente tus manos. Esta oferta exclusiva de un solo clic nunca volverá a estar disponible para ti.
           </p>
 
           {/* Main Book Mockup Image - MATCHES EXACTLY THE MAIN HERO LAYOUT AND SIZES */}
@@ -383,7 +383,7 @@ export default function App() {
               <source srcSet={protocolImgWebp} type="image/webp" />
               <img 
                 src={protocolImgPng} 
-                alt="Protocolo de 21 Días" 
+                alt="Mapa de Digitopuntura" 
                 className="w-full h-auto object-cover"
                 referrerPolicy="no-referrer"
                 onLoad={() => setProtocolImageLoaded(true)}
@@ -404,21 +404,21 @@ export default function App() {
               <div className="flex items-start gap-2.5">
                 <span className="text-red-600 font-bold text-base shrink-0">✔</span>
                 <div>
-                  <strong className="text-red-950">Plan de Acción Instantáneo:</strong> Empieza mañana mismo sin perder tempo planificando o calculando porciones.
+                  <strong className="text-red-950">Atlas de 18 Puntos Ilustrados:</strong> Descubre la ubicación exacta, función y notas de seguridad de cada punto.
                 </div>
               </div>
               
               <div className="flex items-start gap-2.5">
                 <span className="text-red-600 font-bold text-base shrink-0">✔</span>
                 <div>
-                  <strong className="text-red-950">Máximo Ahorro de Tiempo:</strong> Salta directo a la fase práctica de la dietoterapia clínica y obtén resultados más rápidos.
+                  <strong className="text-red-950">6 Protocolos Completos:</strong> Uno para cada patrón de desequilibrio del manual principal de Dietoterapia.
                 </div>
               </div>
 
               <div className="flex items-start gap-2.5">
                 <span className="text-red-600 font-bold text-base shrink-0">✔</span>
                 <div>
-                  <strong className="text-red-950">Garantía de Devolución Extendida:</strong> Sin riesgos. Si el manual no es lo que esperabas, te reembolsamos ambos productos al 100%.
+                  <strong className="text-red-950">Garantía de Devolución Completa:</strong> Sin riesgos. Si no es lo que esperabas, te reembolsamos ambos productos al 100%.
                 </div>
               </div>
 
@@ -445,7 +445,7 @@ export default function App() {
               </span>
             </div>
             <p className="text-[11px] text-red-800 mt-1.5 font-semibold leading-relaxed">
-              Hemos reducido el precio del protocolo de {currency.symbol}{currency.protocolo} a solo <span className="underline font-black">{currency.symbol}{currency.protocoloDownsell}</span>. ¡Última oportunidad!
+              Hemos reducido el precio del mapa de {currency.symbol}{currency.protocolo} a solo <span className="underline font-black">{currency.symbol}{currency.protocoloDownsell}</span>. ¡Última oportunidad!
             </p>
           </div>
 
@@ -507,14 +507,16 @@ export default function App() {
 
           {/* MAIN TITLES */}
           <h1 className="font-serif text-2xl sm:text-3xl md:text-5xl text-forest-dark text-center tracking-tight leading-tight mb-2 font-bold px-2">
-            Protocolo de 21 Días
+            Mapa de Digitopuntura
           </h1>
           <p className="text-gold-dark italic font-semibold text-base sm:text-lg md:text-xl text-center mb-4 md:mb-6">
-            Tu Plan de Acción Diario Listo para Usar
+            18 puntos ilustrados y protocolos completos para los 6 patrones de la Dietoterapia China
           </p>
 
           <p className="text-xs sm:text-sm md:text-base text-gray-600 leading-relaxed text-center max-w-2xl mx-auto mb-6 md:mb-10 px-2">
-            Este protocolo es una herramienta de doble propósito de alto nivel: es excelente tanto para <strong className="text-forest-dark">personas interesadas en aplicarlo en sí mismas</strong> para depurar toxinas y restaurar su flujo digestivo, como para <strong className="text-forest-dark">médicos, nutricionistas o terapeutas</strong> que desean entregar un protocolo clínico llave en mano a sus pacientes, ahorrándoles valiosas horas de planificación con un plan estructurado y 100% listo para usar en consulta.
+            Complementa tu programa de Dietoterapia China con una guía práctica para aplicar digitopuntura de forma fácil y segura, utilizando únicamente tus manos.<br /><br />
+            Descubrirás 18 puntos ilustrados, 6 protocolos completos para los principales desequilibrios energéticos y rutinas rápidas para molestias comunes como ansiedad, insomnio, dolor de cabeza, náuseas y fatiga.<br /><br />
+            Una herramienta práctica para incorporar a tu rutina diaria y potenciar tu bienestar de forma natural.
           </p>
 
           {/* Main Book Mockup Image - MATCHES EXACTLY THE MAIN HERO LAYOUT AND SIZES */}
@@ -531,7 +533,7 @@ export default function App() {
               <source srcSet={protocolImgWebp} type="image/webp" />
               <img
                 src={protocolImgPng}
-                alt="Protocolo de 21 Días"
+                alt="Mapa de Digitopuntura"
                 className="w-full h-auto object-cover"
                 referrerPolicy="no-referrer"
                 onLoad={() => setProtocolImageLoaded(true)}
@@ -545,35 +547,35 @@ export default function App() {
           {/* Core Benefits List Card */}
           <div className="w-full max-w-xl bg-white rounded-3xl border border-sand-dark p-6 sm:p-8 shadow-xl mb-6 md:mb-10">
             <h3 className="font-serif text-lg sm:text-xl font-bold text-forest-dark flex items-center gap-1.5 justify-center mb-4 uppercase tracking-wide">
-              ¿Por qué agregar este protocolo?
+              ¿Qué vas a encontrar en este mapa?
             </h3>
             
             <div className="space-y-3.5 text-xs sm:text-sm text-gray-600">
               <div className="flex items-start gap-2.5">
                 <span className="text-emerald-600 font-bold text-base shrink-0">✔</span>
                 <div>
-                  <strong className="text-forest-dark">Doble Propósito Inteligente:</strong> Úsalo para ti o prescríbelo directamente a tus pacientes en tu práctica clínica privada.
+                  <strong className="text-forest-dark">Atlas Ilustrado de 18 Puntos:</strong> Con la ubicación exacta, función energética detallada y notas de seguridad completas para cada punto.
                 </div>
               </div>
               
               <div className="flex items-start gap-2.5">
                 <span className="text-emerald-600 font-bold text-base shrink-0">✔</span>
                 <div>
-                  <strong className="text-forest-dark">Máximo Ahorro de Tiempo:</strong> Olvídate de planificar desde cero. Un médico o nutricionista obtiene un protocolo clínico ya armado, probado y listo para entregar.
+                  <strong className="text-forest-dark">6 Protocolos Completos:</strong> Uno por cada patrón de desequilibrio del manual principal, facilitando la estimulación directa desde afuera.
                 </div>
               </div>
 
               <div className="flex items-start gap-2.5">
                 <span className="text-emerald-600 font-bold text-base shrink-0">✔</span>
                 <div>
-                  <strong className="text-forest-dark">Menús e Infusiones Clínicas:</strong> Cada día detallado con infusiones, decocciones, alimentos exactos y dosis terapéuticas.
+                  <strong className="text-forest-dark">Alivio de Situaciones Agudas:</strong> Protocolos rápidos para dolor de cabeza, insomnio, ansiedad, náuseas, fatiga, cólico menstrual e inicio de resfriado.
                 </div>
               </div>
 
               <div className="flex items-start gap-2.5">
                 <span className="text-emerald-600 font-bold text-base shrink-0">✔</span>
                 <div>
-                  <strong className="text-forest-dark">Garantía y Formato Portable:</strong> Documento PDF interactivo descargable de por vida cubierto por la misma garantía de tu compra principal.
+                  <strong className="text-forest-dark">Secuencias y Diario de Progreso:</strong> Combinaciones recomendadas para patrones dobles y un diario de seguimiento de 4 semanas.
                 </div>
               </div>
             </div>
@@ -1075,65 +1077,65 @@ export default function App() {
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-10 items-stretch max-w-4xl mx-auto px-2 md:px-0" id="pricing-plans-grid">
             
             {/* PLAN BÁSICO CARD */}
-            <div className="bg-white text-gray-800 rounded-3xl border border-gray-200 p-6 md:p-8 flex flex-col justify-between shadow-xl transition-all duration-300 hover:border-gray-300 text-left relative" id="plan-basico-card">
+            <div className="bg-[#09261a] text-white rounded-3xl border border-forest-light/35 p-6 md:p-8 flex flex-col justify-between shadow-xl transition-all duration-300 hover:border-forest-light/60 text-left relative" id="plan-basico-card">
               
               <div>
                 {/* Header Badge */}
-                <div className="text-2xl md:text-3xl tracking-wider font-black text-gray-800 uppercase mb-6">
+                <div className="text-2xl md:text-3xl tracking-wider font-black text-white uppercase mb-6">
                   PLAN BÁSICO
                 </div>
 
                 {/* Features List */}
-                <div className="space-y-4 pt-4 border-t border-gray-100">
-                  <div className="flex items-start gap-2.5 text-xs md:text-sm text-gray-700">
-                    <span className="text-emerald-600 shrink-0 mt-0.5">✔</span>
+                <div className="space-y-4 pt-4 border-t border-white/10">
+                  <div className="flex items-start gap-2.5 text-xs md:text-sm text-sand-light/95">
+                    <span className="text-emerald-400 shrink-0 mt-0.5">✔</span>
                     <span>Manual Completo <strong>"Dietoterapia China"</strong></span>
                   </div>
-                  <div className="flex items-start gap-2.5 text-xs md:text-sm text-gray-400 line-through select-none">
-                    <span className="text-red-500 shrink-0 mt-0.5">❌</span>
+                  <div className="flex items-start gap-2.5 text-xs md:text-sm text-white/30 line-through select-none">
+                    <span className="text-red-400/60 shrink-0 mt-0.5">❌</span>
                     <span>Sin bonos exclusivos incluidos en el paquete</span>
                   </div>
-                  <div className="flex items-start gap-2.5 text-xs md:text-sm text-gray-400 line-through select-none">
-                    <span className="text-red-500 shrink-0 mt-0.5">❌</span>
+                  <div className="flex items-start gap-2.5 text-xs md:text-sm text-white/30 line-through select-none">
+                    <span className="text-red-400/60 shrink-0 mt-0.5">❌</span>
                     <span>Sin actualizaciones futuras gratuitas</span>
                   </div>
-                  <div className="flex items-start gap-2.5 text-xs md:text-sm text-gray-400 line-through select-none">
-                    <span className="text-red-500 shrink-0 mt-0.5">❌</span>
+                  <div className="flex items-start gap-2.5 text-xs md:text-sm text-white/30 line-through select-none">
+                    <span className="text-red-400/60 shrink-0 mt-0.5">❌</span>
                     <span>Sin soporte prioritario de dudas por correo electrónico</span>
                   </div>
                 </div>
 
                 {/* Prices - Moved below Features List and centered */}
-                <div className="mt-4 mb-3 pt-4 border-t border-gray-100 flex flex-col items-center justify-center text-center w-full" id="price-stack-basico">
+                <div className="mt-4 mb-3 pt-4 border-t border-white/10 flex flex-col items-center justify-center text-center w-full" id="price-stack-basico">
                   {/* Original Price */}
-                  <span className="text-sm md:text-base font-bold text-red-500 line-through tracking-tight mb-1">
+                  <span className="text-sm md:text-base font-bold text-red-400 line-through tracking-tight mb-1">
                     De {currency.symbol}{currency.basicoOriginal} por solo
                   </span>
                   {/* Current Price */}
                   <div className="flex items-baseline justify-center gap-2">
-                    <span className="text-5xl md:text-6xl font-serif font-black tracking-tight text-[#113827] leading-none">
+                    <span className="text-5xl md:text-6xl font-serif font-black tracking-tight text-white leading-none">
                       {currency.symbol}{currency.basico}
                     </span>
                     {currency.code !== "USD" && (
-                      <span className="text-sm font-sans text-gray-500">
+                      <span className="text-sm font-sans text-sand-dark/60">
                         (~ $5 USD)
                       </span>
                     )}
                   </div>
                   {/* Bottom Label */}
-                  <span className="text-xs text-gray-500 mt-2 font-medium tracking-wide">
+                  <span className="text-xs text-sand-dark/60 mt-2 font-medium tracking-wide">
                     pago único ({currency.code})
                   </span>
                 </div>
               </div>
 
               {/* Action Button */}
-              <div className="mt-4 pt-4 border-t border-gray-100">
+              <div className="mt-4 pt-4 border-t border-white/10">
                 <button
                   onClick={() => {
                     setShowUpsellModal(true);
                   }}
-                  className="block w-full py-4 rounded-xl bg-white hover:bg-emerald-50/40 border-2 border-[#113827] text-[#113827] font-extrabold text-sm tracking-wider uppercase transition-all duration-300 hover:scale-[1.01] active:scale-[0.99] text-center cursor-pointer shadow-sm"
+                  className="block w-full py-4 rounded-xl bg-white hover:bg-sand-light border-2 border-white text-[#09261a] font-extrabold text-sm tracking-wider uppercase transition-all duration-300 hover:scale-[1.01] active:scale-[0.99] text-center cursor-pointer shadow-sm"
                   id="checkout-plan-basico"
                 >
                   Quiero el Plan Básico ➔
