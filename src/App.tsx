@@ -87,22 +87,82 @@ const defaultCurrency: CurrencyInfo = {
   upsell: "10",
   protocolo: "27",
   protocoloOriginal: "59",
-  protocoloDownsell: "10"
+  protocoloDownsell: "7.90"
 };
 
 /**
  * Dictionary mapping regional ISO 3166-1 alpha-2 country codes to localized values.
  */
 const currencyMap: Record<string, CurrencyInfo> = {
-  MX: { code: "MXN", symbol: "$", basico: "95", completo: "285", basicoOriginal: "550", completoOriginal: "1200", bono1: "285", bono2: "190", bono3: "228", bono4: "285", bono5: "228", bono6: "342", bono7: "190", bonosTotal: "1748", upsell: "190", protocolo: "513", protocoloOriginal: "1100", protocoloDownsell: "190" }, // Mexico
-  CO: { code: "COP", symbol: "$", basico: "20.000", completo: "60.000", basicoOriginal: "120.000", completoOriginal: "260.000", bono1: "60.000", bono2: "40.000", bono3: "48.000", bono4: "60.000", bono5: "48.000", bono6: "72.000", bono7: "40.000", bonosTotal: "368.000", upsell: "40.000", protocolo: "108.000", protocoloOriginal: "230.000", protocoloDownsell: "40.000" }, // Colombia
-  CL: { code: "CLP", symbol: "$", basico: "4.700", completo: "14.000", basicoOriginal: "27.000", completoOriginal: "60.000", bono1: "14.000", bono2: "9.300", bono3: "11.000", bono4: "14.000", bono5: "11.000", bono6: "16.750", bono7: "9.300", bonosTotal: "85.350", upsell: "9.300", protocolo: "25.200", protocoloOriginal: "54.000", protocoloDownsell: "9.300" }, // Chile
-  PE: { code: "PEN", symbol: "S/.", basico: "18.5", completo: "55", basicoOriginal: "110", completoOriginal: "240", bono1: "55", bono2: "37", bono3: "44", bono4: "55", bono5: "44", bono6: "66.5", bono7: "37", bonosTotal: "338.5", upsell: "37", protocolo: "100", protocoloOriginal: "215", protocoloDownsell: "37" }, // Peru
-  AR: { code: "ARS", symbol: "$", basico: "4.500", completo: "13.500", basicoOriginal: "26.000", completoOriginal: "58.000", bono1: "13.500", bono2: "9.000", bono3: "10.800", bono4: "13.500", bono5: "10.800", bono6: "16.200", bono7: "9.000", bonosTotal: "82.800", upsell: "9.000", protocolo: "24.300", protocoloOriginal: "52.000", protocoloDownsell: "9.000" }, // Argentina
-  BR: { code: "BRL", symbol: "R$", basico: "28", completo: "85", basicoOriginal: "160", completoOriginal: "350", bono1: "85", bono2: "56", bono3: "68", bono4: "85", bono5: "68", bono6: "100", bono7: "56", bonosTotal: "518", upsell: "56", protocolo: "150", protocoloOriginal: "320", protocoloDownsell: "56" }, // Brazil
-  ES: { code: "EUR", symbol: "€", basico: "5", completo: "15", basicoOriginal: "29", completoOriginal: "64", bono1: "15", bono2: "10", bono3: "12", bono4: "15", bono5: "12", bono6: "18", bono7: "10", bonosTotal: "92", upsell: "10", protocolo: "27", protocoloOriginal: "59", protocoloDownsell: "10" }, // Spain
-  UY: { code: "UYU", symbol: "$U", basico: "215", completo: "650", basicoOriginal: "1250", completoOriginal: "2750", bono1: "650", bono2: "430", bono3: "520", bono4: "650", bono5: "520", bono6: "770", bono7: "430", bonosTotal: "3.970", upsell: "430", protocolo: "1.170", protocoloOriginal: "2.500", protocoloDownsell: "430" }, // Uruguay
+  MX: { code: "MXN", symbol: "$", basico: "95", completo: "285", basicoOriginal: "550", completoOriginal: "1200", bono1: "285", bono2: "190", bono3: "228", bono4: "285", bono5: "228", bono6: "342", bono7: "190", bonosTotal: "1748", upsell: "190", protocolo: "513", protocoloOriginal: "1100", protocoloDownsell: "150" }, // Mexico
+  CO: { code: "COP", symbol: "$", basico: "20.000", completo: "60.000", basicoOriginal: "120.000", completoOriginal: "260.000", bono1: "60.000", bono2: "40.000", bono3: "48.000", bono4: "60.000", bono5: "48.000", bono6: "72.000", bono7: "40.000", bonosTotal: "368.000", upsell: "40.000", protocolo: "108.000", protocoloOriginal: "230.000", protocoloDownsell: "31.600" }, // Colombia
+  CL: { code: "CLP", symbol: "$", basico: "4.700", completo: "14.000", basicoOriginal: "27.000", completoOriginal: "60.000", bono1: "14.000", bono2: "9.300", bono3: "11.000", bono4: "14.000", bono5: "11.000", bono6: "16.750", bono7: "9.300", bonosTotal: "85.350", upsell: "9.300", protocolo: "25.200", protocoloOriginal: "54.000", protocoloDownsell: "7.350" }, // Chile
+  PE: { code: "PEN", symbol: "S/.", basico: "18.5", completo: "55", basicoOriginal: "110", completoOriginal: "240", bono1: "55", bono2: "37", bono3: "44", bono4: "55", bono5: "44", bono6: "66.5", bono7: "37", bonosTotal: "338.5", upsell: "37", protocolo: "100", protocoloOriginal: "215", protocoloDownsell: "29" }, // Peru
+  AR: { code: "ARS", symbol: "$", basico: "4.500", completo: "13.500", basicoOriginal: "26.000", completoOriginal: "58.000", bono1: "13.500", bono2: "9.000", bono3: "10.800", bono4: "13.500", bono5: "10.800", bono6: "16.200", bono7: "9.000", bonosTotal: "82.800", upsell: "9.000", protocolo: "24.300", protocoloOriginal: "52.000", protocoloDownsell: "11.800" }, // Argentina
+  BR: { code: "BRL", symbol: "R$", basico: "28", completo: "85", basicoOriginal: "160", completoOriginal: "350", bono1: "85", bono2: "56", bono3: "68", bono4: "85", bono5: "68", bono6: "100", bono7: "56", bonosTotal: "518", upsell: "56", protocolo: "150", protocoloOriginal: "320", protocoloDownsell: "44" }, // Brazil
+  ES: { code: "EUR", symbol: "€", basico: "5", completo: "15", basicoOriginal: "29", completoOriginal: "64", bono1: "15", bono2: "10", bono3: "12", bono4: "15", bono5: "12", bono6: "18", bono7: "10", bonosTotal: "92", upsell: "10", protocolo: "27", protocoloOriginal: "59", protocoloDownsell: "7.90" }, // Spain
+  UY: { code: "UYU", symbol: "$U", basico: "215", completo: "650", basicoOriginal: "1250", completoOriginal: "2750", bono1: "650", bono2: "430", bono3: "520", bono4: "650", bono5: "520", bono6: "770", bono7: "430", bonosTotal: "3.970", upsell: "430", protocolo: "1.170", protocoloOriginal: "2.500", protocoloDownsell: "340" }, // Uruguay
   US: defaultCurrency,
+};
+
+/**
+ * Helper function to dynamically convert default USD prices using live exchange rates.
+ * Generates custom rounded and formatted numbers appropriate for each region.
+ */
+const getConvertedCurrency = (base: CurrencyInfo, rate: number, code: string, symbol: string): CurrencyInfo => {
+  const localeMap: Record<string, string> = {
+    MXN: "es-MX",
+    COP: "es-CO",
+    CLP: "es-CL",
+    PEN: "es-PE",
+    ARS: "es-AR",
+    BRL: "pt-BR",
+    EUR: "es-ES",
+    UYU: "es-UY",
+    USD: "en-US"
+  };
+
+  const locale = localeMap[code] || "es-ES";
+  const noDecimalsCurrencies = ["COP", "CLP", "ARS", "BRL", "UYU", "MXN"];
+
+  const formatVal = (usdStr: string) => {
+    const usdNum = parseFloat(usdStr.replace(/[^0-9.]/g, ""));
+    if (isNaN(usdNum)) return usdStr;
+    const converted = usdNum * rate;
+    
+    // Check if base has decimals or we should force whole numbers
+    const isBaseInt = usdNum % 1 === 0;
+    const isNoDecimalTarget = noDecimalsCurrencies.includes(code);
+
+    if (isBaseInt || isNoDecimalTarget) {
+      const rounded = Math.round(converted);
+      return rounded.toLocaleString(locale, { minimumFractionDigits: 0, maximumFractionDigits: 0 });
+    } else {
+      const rounded = Math.round(converted * 100) / 100;
+      return rounded.toLocaleString(locale, { minimumFractionDigits: 2, maximumFractionDigits: 2 });
+    }
+  };
+
+  return {
+    code,
+    symbol,
+    basico: formatVal(base.basico),
+    completo: formatVal(base.completo),
+    basicoOriginal: formatVal(base.basicoOriginal),
+    completoOriginal: formatVal(base.completoOriginal),
+    bono1: formatVal(base.bono1),
+    bono2: formatVal(base.bono2),
+    bono3: formatVal(base.bono3),
+    bono4: formatVal(base.bono4),
+    bono5: formatVal(base.bono5),
+    bono6: formatVal(base.bono6),
+    bono7: formatVal(base.bono7),
+    bonosTotal: formatVal(base.bonosTotal),
+    upsell: formatVal(base.upsell),
+    protocolo: formatVal(base.protocolo),
+    protocoloOriginal: formatVal(base.protocoloOriginal),
+    protocoloDownsell: formatVal(base.protocoloDownsell),
+  };
 };
 
 /**
@@ -204,23 +264,47 @@ export default function App() {
     return currencyMap[initialCountry] || defaultCurrency;
   });
 
-  // Dynamic API lookup for accurate IP Geolocation mapping
+  // Dynamic API lookup for accurate IP Geolocation mapping and real-time exchange rates
   useEffect(() => {
-    fetch("https://ipwho.is/")
-      .then((res) => {
-        if (!res.ok) throw new Error("Failed to fetch country from IP");
+    let countryCode = getCountryByTimezone();
+    let ratesData: Record<string, number> | null = null;
+
+    const updatePricing = (country: string, rates: Record<string, number> | null) => {
+      const staticConfig = currencyMap[country] || defaultCurrency;
+      
+      if (rates && staticConfig.code !== "USD") {
+        const rate = rates[staticConfig.code];
+        if (rate) {
+          const dynamicCurrency = getConvertedCurrency(defaultCurrency, rate, staticConfig.code, staticConfig.symbol);
+          setCurrency(dynamicCurrency);
+          return;
+        }
+      }
+      
+      setCurrency(staticConfig);
+    };
+
+    Promise.allSettled([
+      fetch("https://ipwho.is/").then((res) => {
+        if (!res.ok) throw new Error("Failed to fetch country");
+        return res.json();
+      }),
+      fetch("https://open.er-api.com/v6/latest/USD").then((res) => {
+        if (!res.ok) throw new Error("Failed to fetch exchange rates");
         return res.json();
       })
-      .then((data) => {
-        const country = data.country_code;
-        if (country && currencyMap[country]) {
-          setCurrency(currencyMap[country]);
-        }
-      })
-      .catch((err) => {
-        // Soft fallback to timezone is normal and expected when browser is sandboxed or using tracking protection
-        console.debug("IP Geolocation fallback to Timezone detection:", err.message || err);
-      });
+    ]).then(([ipResult, ratesResult]) => {
+      if (ipResult.status === "fulfilled" && ipResult.value?.country_code) {
+        countryCode = ipResult.value.country_code;
+      }
+      if (ratesResult.status === "fulfilled" && ratesResult.value?.rates) {
+        ratesData = ratesResult.value.rates;
+      }
+      updatePricing(countryCode, ratesData);
+    }).catch((err) => {
+      console.debug("Fallback to timezone detection or static pricing:", err);
+      updatePricing(countryCode, null);
+    });
   }, []);
 
   // Live countdown timer state (starting from 10 minutes, 51 seconds like the original screenshot)
