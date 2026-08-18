@@ -84,24 +84,24 @@ const defaultCurrency: CurrencyInfo = {
   bono6: "18",
   bono7: "10",
   bonosTotal: "92",
-  upsell: "10",
-  protocolo: "27",
-  protocoloOriginal: "59",
-  protocoloDownsell: "7.90"
+  upsell: "9.90",
+  protocolo: "9.90",
+  protocoloOriginal: "19.90",
+  protocoloDownsell: "5.90"
 };
 
 /**
  * Dictionary mapping regional ISO 3166-1 alpha-2 country codes to localized values.
  */
 const currencyMap: Record<string, CurrencyInfo> = {
-  MX: { code: "MXN", symbol: "$", basico: "95", completo: "285", basicoOriginal: "550", completoOriginal: "1200", bono1: "285", bono2: "190", bono3: "228", bono4: "285", bono5: "228", bono6: "342", bono7: "190", bonosTotal: "1748", upsell: "190", protocolo: "513", protocoloOriginal: "1100", protocoloDownsell: "150" }, // Mexico
-  CO: { code: "COP", symbol: "$", basico: "20.000", completo: "60.000", basicoOriginal: "120.000", completoOriginal: "260.000", bono1: "60.000", bono2: "40.000", bono3: "48.000", bono4: "60.000", bono5: "48.000", bono6: "72.000", bono7: "40.000", bonosTotal: "368.000", upsell: "40.000", protocolo: "108.000", protocoloOriginal: "230.000", protocoloDownsell: "31.600" }, // Colombia
-  CL: { code: "CLP", symbol: "$", basico: "4.700", completo: "14.000", basicoOriginal: "27.000", completoOriginal: "60.000", bono1: "14.000", bono2: "9.300", bono3: "11.000", bono4: "14.000", bono5: "11.000", bono6: "16.750", bono7: "9.300", bonosTotal: "85.350", upsell: "9.300", protocolo: "25.200", protocoloOriginal: "54.000", protocoloDownsell: "7.350" }, // Chile
-  PE: { code: "PEN", symbol: "S/.", basico: "18.5", completo: "55", basicoOriginal: "110", completoOriginal: "240", bono1: "55", bono2: "37", bono3: "44", bono4: "55", bono5: "44", bono6: "66.5", bono7: "37", bonosTotal: "338.5", upsell: "37", protocolo: "100", protocoloOriginal: "215", protocoloDownsell: "29" }, // Peru
-  AR: { code: "ARS", symbol: "$", basico: "4.500", completo: "13.500", basicoOriginal: "26.000", completoOriginal: "58.000", bono1: "13.500", bono2: "9.000", bono3: "10.800", bono4: "13.500", bono5: "10.800", bono6: "16.200", bono7: "9.000", bonosTotal: "82.800", upsell: "9.000", protocolo: "24.300", protocoloOriginal: "52.000", protocoloDownsell: "11.800" }, // Argentina
-  BR: { code: "BRL", symbol: "R$", basico: "28", completo: "85", basicoOriginal: "160", completoOriginal: "350", bono1: "85", bono2: "56", bono3: "68", bono4: "85", bono5: "68", bono6: "100", bono7: "56", bonosTotal: "518", upsell: "56", protocolo: "150", protocoloOriginal: "320", protocoloDownsell: "44" }, // Brazil
-  ES: { code: "EUR", symbol: "€", basico: "5", completo: "15", basicoOriginal: "29", completoOriginal: "64", bono1: "15", bono2: "10", bono3: "12", bono4: "15", bono5: "12", bono6: "18", bono7: "10", bonosTotal: "92", upsell: "10", protocolo: "27", protocoloOriginal: "59", protocoloDownsell: "7.90" }, // Spain
-  UY: { code: "UYU", symbol: "$U", basico: "215", completo: "650", basicoOriginal: "1250", completoOriginal: "2750", bono1: "650", bono2: "430", bono3: "520", bono4: "650", bono5: "520", bono6: "770", bono7: "430", bonosTotal: "3.970", upsell: "430", protocolo: "1.170", protocoloOriginal: "2.500", protocoloDownsell: "340" }, // Uruguay
+  MX: { code: "MXN", symbol: "$", basico: "104", completo: "313", basicoOriginal: "605", completoOriginal: "1335", bono1: "313", bono2: "209", bono3: "250", bono4: "313", bono5: "250", bono6: "376", bono7: "209", bonosTotal: "1920", upsell: "207", protocolo: "207", protocoloOriginal: "415", protocoloDownsell: "123" }, // Mexico
+  CO: { code: "COP", symbol: "$", basico: "16.500", completo: "49.607", basicoOriginal: "96.000", completoOriginal: "212.000", bono1: "49.607", bono2: "33.000", bono3: "39.700", bono4: "49.607", bono5: "39.700", bono6: "59.500", bono7: "33.000", bonosTotal: "304.000", upsell: "32.700", protocolo: "32.700", protocoloOriginal: "65.800", protocoloDownsell: "19.500" }, // Colombia
+  CL: { code: "CLP", symbol: "$", basico: "5.740", completo: "17.231", basicoOriginal: "33.300", completoOriginal: "73.500", bono1: "17.231", bono2: "11.500", bono3: "13.800", bono4: "17.231", bono5: "13.800", bono6: "20.700", bono7: "11.500", bonosTotal: "105.700", upsell: "11.370", protocolo: "11.370", protocoloOriginal: "22.860", protocoloDownsell: "6.780" }, // Chile
+  PE: { code: "PEN", symbol: "S/.", basico: "18.00", completo: "54.00", basicoOriginal: "104.00", completoOriginal: "230.00", bono1: "54.00", bono2: "36.00", bono3: "43.00", bono4: "54.00", bono5: "43.00", bono6: "65.00", bono7: "36.00", bonosTotal: "331.00", upsell: "35.60", protocolo: "35.60", protocoloOriginal: "71.60", protocoloDownsell: "21.20" }, // Peru
+  AR: { code: "ARS", symbol: "$", basico: "8.400", completo: "25.212", basicoOriginal: "48.700", completoOriginal: "107.500", bono1: "25.212", bono2: "16.800", bono3: "20.100", bono4: "25.212", bono5: "20.100", bono6: "30.200", bono7: "16.800", bonosTotal: "154.600", upsell: "16.600", protocolo: "16.600", protocoloOriginal: "33.400", protocoloDownsell: "9.900" }, // Argentina
+  BR: { code: "BRL", symbol: "R$", basico: "28", completo: "85", basicoOriginal: "165", completoOriginal: "360", bono1: "85", bono2: "57", bono3: "68", bono4: "85", bono5: "68", bono6: "102", bono7: "57", bonosTotal: "522", upsell: "56", protocolo: "56", protocoloOriginal: "112", protocoloDownsell: "33" }, // Brazil
+  ES: { code: "EUR", symbol: "€", basico: "4,85", completo: "14,56", basicoOriginal: "28,00", completoOriginal: "62,00", bono1: "14,56", bono2: "9,70", bono3: "11,65", bono4: "14,56", bono5: "11,65", bono6: "17,45", bono7: "9,70", bonosTotal: "89,30", upsell: "9,60", protocolo: "9,60", protocoloOriginal: "19,30", protocoloDownsell: "5,70" }, // Spain
+  UY: { code: "UYU", symbol: "$U", basico: "210", completo: "635", basicoOriginal: "1.230", completoOriginal: "2.710", bono1: "635", bono2: "420", bono3: "510", bono4: "635", bono5: "510", bono6: "760", bono7: "420", bonosTotal: "3.890", upsell: "420", protocolo: "420", protocoloOriginal: "840", protocoloDownsell: "250" }, // Uruguay
   US: defaultCurrency,
 };
 
@@ -264,47 +264,22 @@ export default function App() {
     return currencyMap[initialCountry] || defaultCurrency;
   });
 
-  // Dynamic API lookup for accurate IP Geolocation mapping and real-time exchange rates
+  // Dynamic API lookup for accurate IP Geolocation mapping matching Hotmart exact prices
   useEffect(() => {
-    let countryCode = getCountryByTimezone();
-    let ratesData: Record<string, number> | null = null;
-
-    const updatePricing = (country: string, rates: Record<string, number> | null) => {
-      const staticConfig = currencyMap[country] || defaultCurrency;
-      
-      if (rates && staticConfig.code !== "USD") {
-        const rate = rates[staticConfig.code];
-        if (rate) {
-          const dynamicCurrency = getConvertedCurrency(defaultCurrency, rate, staticConfig.code, staticConfig.symbol);
-          setCurrency(dynamicCurrency);
-          return;
-        }
-      }
-      
-      setCurrency(staticConfig);
-    };
-
-    Promise.allSettled([
-      fetch("https://ipwho.is/").then((res) => {
+    fetch("https://ipwho.is/")
+      .then((res) => {
         if (!res.ok) throw new Error("Failed to fetch country");
         return res.json();
-      }),
-      fetch("https://open.er-api.com/v6/latest/USD").then((res) => {
-        if (!res.ok) throw new Error("Failed to fetch exchange rates");
-        return res.json();
       })
-    ]).then(([ipResult, ratesResult]) => {
-      if (ipResult.status === "fulfilled" && ipResult.value?.country_code) {
-        countryCode = ipResult.value.country_code;
-      }
-      if (ratesResult.status === "fulfilled" && ratesResult.value?.rates) {
-        ratesData = ratesResult.value.rates;
-      }
-      updatePricing(countryCode, ratesData);
-    }).catch((err) => {
-      console.debug("Fallback to timezone detection or static pricing:", err);
-      updatePricing(countryCode, null);
-    });
+      .then((data) => {
+        const country = data.country_code;
+        if (country && currencyMap[country]) {
+          setCurrency(currencyMap[country]);
+        }
+      })
+      .catch((err) => {
+        console.debug("Fallback to timezone detection:", err);
+      });
   }, []);
 
   // Live countdown timer state (starting from 10 minutes, 51 seconds like the original screenshot)
@@ -927,11 +902,10 @@ export default function App() {
           {/* CTA Button 1 */}
           <button
             onClick={() => scrollToSection("plan-completo-card")}
-            className="inline-flex flex-col items-center justify-center px-8 py-4 rounded-full bg-[#113827] hover:bg-[#1a4b35] text-white font-extrabold text-xs md:text-sm tracking-widest uppercase transition-all duration-300 transform hover:scale-105 active:scale-95 shadow-lg shadow-forest-dark/20 cursor-pointer"
+            className="inline-flex items-center justify-center px-8 py-4 rounded-full bg-[#113827] hover:bg-[#1a4b35] text-white font-extrabold text-xs md:text-sm tracking-widest uppercase transition-all duration-300 transform hover:scale-105 active:scale-95 shadow-lg shadow-forest-dark/20 cursor-pointer"
             id="hero-cta-btn"
           >
-            <span>QUIERO ACCEDER AHORA</span>
-            <span className="text-xs mt-1 font-sans">➔</span>
+            QUIERO ACCEDER AHORA
           </button>
 
           {/* Trust indicators */}
@@ -1032,11 +1006,10 @@ export default function App() {
           <div className="text-center">
             <button
               onClick={() => scrollToSection("plan-completo-card")}
-              className="inline-flex flex-col items-center justify-center px-10 py-5 rounded-full bg-[#c59f5b] hover:bg-[#dfc28d] text-[#113827] font-extrabold text-xs md:text-sm tracking-widest uppercase transition-all duration-300 transform hover:scale-105 active:scale-95 shadow-xl cursor-pointer"
+              className="inline-flex items-center justify-center px-10 py-5 rounded-full bg-[#c59f5b] hover:bg-[#dfc28d] text-[#113827] font-extrabold text-xs md:text-sm tracking-widest uppercase transition-all duration-300 transform hover:scale-105 active:scale-95 shadow-xl cursor-pointer"
               id="pain-points-cta-btn"
             >
-              <span>QUIERO ACCEDER AHORA</span>
-              <span className="text-xs mt-1 font-sans">➔</span>
+              QUIERO ACCEDER AHORA
             </button>
           </div>
         </div>
@@ -1389,7 +1362,7 @@ export default function App() {
                   className="block w-full py-4 rounded-xl bg-[#09261a] hover:bg-white hover:text-[#09261a] border-2 border-white text-white font-extrabold text-sm tracking-wider uppercase transition-all duration-300 hover:scale-[1.01] active:scale-[0.99] text-center cursor-pointer shadow-sm"
                   id="checkout-plan-basico"
                 >
-                  Quiero el Plan Básico ➔
+                  Quiero el Plan Básico
                 </button>
               </div>
 
@@ -1500,7 +1473,7 @@ export default function App() {
                   className="block w-full py-4.5 rounded-xl bg-[#113827] hover:bg-[#1b4b35] text-white font-extrabold text-sm tracking-wider uppercase transition-all duration-300 transform hover:scale-[1.02] active:scale-[0.98] shadow-lg hover:shadow-emerald-900/10 text-center cursor-pointer"
                   id="checkout-plan-completo"
                 >
-                  Quiero el Plan Completo ➔
+                  Quiero el Plan Completo
                 </button>
               </div>
 
@@ -1636,11 +1609,10 @@ export default function App() {
           <div className="text-center">
             <button
               onClick={() => scrollToSection("plan-completo-card")}
-              className="inline-flex flex-col items-center justify-center px-10 py-5 rounded-full bg-[#113827] hover:bg-[#1b4b35] text-white font-extrabold text-xs md:text-sm tracking-widest uppercase transition-all duration-300 transform hover:scale-105 active:scale-95 shadow-xl cursor-pointer"
+              className="inline-flex items-center justify-center px-10 py-5 rounded-full bg-[#113827] hover:bg-[#1b4b35] text-white font-extrabold text-xs md:text-sm tracking-widest uppercase transition-all duration-300 transform hover:scale-105 active:scale-95 shadow-xl cursor-pointer"
               id="patient-testimonials-cta-btn"
             >
-              <span>QUIERO ACCEDER AHORA</span>
-              <span className="text-xs mt-1 font-sans">➔</span>
+              QUIERO ACCEDER AHORA
             </button>
           </div>
         </div>
@@ -1721,11 +1693,10 @@ export default function App() {
           {/* Button */}
           <button
             onClick={() => scrollToSection("plan-completo-card")}
-            className="inline-flex flex-col items-center justify-center px-10 py-5 rounded-full bg-gold-medium hover:bg-gold-light text-forest-dark font-extrabold text-xs md:text-sm tracking-widest uppercase transition-all duration-300 transform hover:scale-105 active:scale-95 shadow-xl cursor-pointer"
+            className="inline-flex items-center justify-center px-10 py-5 rounded-full bg-gold-medium hover:bg-gold-light text-forest-dark font-extrabold text-xs md:text-sm tracking-widest uppercase transition-all duration-300 transform hover:scale-105 active:scale-95 shadow-xl cursor-pointer"
             id="final-cta-checkout-btn"
           >
-            <span>QUIERO ACCEDER AHORA</span>
-            <span className="text-xs mt-1 font-sans">➔</span>
+            QUIERO ACCEDER AHORA
           </button>
 
         </div>
@@ -1771,7 +1742,7 @@ export default function App() {
               <span className="font-mono font-extrabold text-base text-emerald-800">{currency.symbol}{currency.upsell}</span>{" "}
               {currency.code !== "USD" && (
                 <span className="text-xs text-emerald-800 font-bold">
-                  (~ $10 USD)
+                  (~ $9.90 USD)
                 </span>
               )}
             </p>
