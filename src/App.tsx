@@ -35,8 +35,11 @@ const protocolImgAvif = "https://res.cloudinary.com/dgncwrnvw/image/upload/v1784
 const protocolImgWebp = "https://res.cloudinary.com/dgncwrnvw/image/upload/v1784985785/ChatGPT_Image_25_lug_2026_10_19_01_rm0ob4.webp";
 const protocolImgPng = "https://i.ibb.co/hJZNX1mh/Chat-GPT-Image-15-lug-2026-22-41-37.png";
 
-const guashaImgAvif = "https://res.cloudinary.com/dgncwrnvw/image/upload/v1785327873/ChatGPT_Image_29_lug_2026_09_22_03_ezvqws.avif";
-const guashaImgWebp = "https://res.cloudinary.com/dgncwrnvw/image/upload/v1785327873/ChatGPT_Image_29_lug_2026_09_22_03_wxey4d.webp";
+const guashaImgAvif = "https://res.cloudinary.com/dgncwrnvw/image/upload/v1787678942/Translate_image_text_into_Spanish_202608251428_xxpjtp.avif";
+const guashaImgWebp = "https://res.cloudinary.com/dgncwrnvw/image/upload/v1787678942/Translate_image_text_into_Spanish_202608251428_wnfzcz.webp";
+
+const downsellGuashaImgAvif = "https://res.cloudinary.com/dgncwrnvw/image/upload/v1785327873/ChatGPT_Image_29_lug_2026_09_22_03_ezvqws.avif";
+const downsellGuashaImgWebp = "https://res.cloudinary.com/dgncwrnvw/image/upload/v1785327873/ChatGPT_Image_29_lug_2026_09_22_03_wxey4d.webp";
 
 // ============================================================================
 // REGION: GEOLOCATION & DYNAMIC CURRENCY ENGINE
@@ -535,10 +538,10 @@ export default function App() {
                 </div>
               )}
               <picture className={`w-full transition-opacity duration-700 ease-in-out ${guashaImageLoaded ? "opacity-100" : "opacity-0"}`}>
-                <source srcSet={guashaImgAvif} type="image/avif" />
-                <source srcSet={guashaImgWebp} type="image/webp" />
+                <source srcSet={downsellGuashaImgAvif} type="image/avif" />
+                <source srcSet={downsellGuashaImgWebp} type="image/webp" />
                 <img 
-                  src={guashaImgAvif} 
+                  src={downsellGuashaImgAvif} 
                   alt="Guía de Gua Sha y Automasaje Facial" 
                   className="w-full h-auto object-cover"
                   referrerPolicy="no-referrer"
@@ -624,209 +627,161 @@ export default function App() {
 
   if (currentPath === "/upsell") {
     return (
-      <div className="min-h-screen bg-sand-light antialiased font-sans text-gray-800 flex flex-col justify-between relative" id="upsell-landing-page">
+      <div className="min-h-screen bg-[#faf8f2] antialiased font-sans text-gray-800 flex flex-col justify-between relative" id="upsell-landing-page">
         
         {/* TOP URGENT BANNER */}
         <div className="bg-[#09261a] text-white text-[11px] md:text-xs py-2.5 px-4 text-center font-mono flex items-center justify-center gap-2 select-none shadow-sm sticky top-0 z-40">
           <span className="inline-block animate-pulse text-gold-medium font-bold">⚠️</span>
           <span className="font-sans font-medium tracking-wide">
-            Oportunidad Única: Esta oferta complementaria solo está disponible aquí
+            Oportunidad única: esta oferta complementaria solo está disponible aquí
           </span>
           <span className="mx-1">•</span>
-          <span className="font-bold text-gold-medium tracking-widest bg-black/30 px-2 py-0.5 rounded">
+          <span className="font-bold text-[#dfc28d] tracking-widest bg-black/40 px-2 py-0.5 rounded">
             {formatTime(timeLeft)}
           </span>
         </div>
 
-        {/* CONTENT CONTAINER - aligned to top */}
-        <div className="max-w-4xl mx-auto px-4 sm:px-6 md:px-8 pt-4 sm:pt-6 pb-12 flex-1 flex flex-col items-center justify-start">
+        {/* CONTENT CONTAINER */}
+        <div className="max-w-3xl mx-auto px-4 sm:px-6 md:px-8 pt-6 pb-16 flex-1 flex flex-col items-center justify-start">
           
-          {/* THANK YOU / SUCCESS NOTICE */}
-          <div className="w-full max-w-3xl bg-emerald-50/80 border border-emerald-200 rounded-xl py-2 px-4 text-center mb-6 shadow-xs animate-in fade-in duration-300">
-            <div className="flex items-center justify-center gap-2 text-emerald-800 text-xs">
-              <span>🎉</span>
-              <p className="font-sans font-medium text-emerald-900">
-                <strong>¡Gracias por tu compra!</strong> Tu pedido ya se está enviando a tu correo. No cierres esta página, mira esta adición exclusiva recomendada:
+          {/* CONFIRMED PURCHASE BANNER */}
+          <div className="w-full bg-[#edfdf6] border border-[#c3f6df] rounded-2xl py-4 px-6 text-center mb-8 shadow-xs">
+            <div className="flex flex-col items-center justify-center gap-1">
+              <span className="text-emerald-800 font-bold text-sm tracking-wide flex items-center gap-1.5 uppercase">
+                ✓ TU COMPRA ESTÁ CONFIRMADA
+              </span>
+              <p className="text-emerald-900 text-xs sm:text-sm">
+                Tus materiales de Dietoterapia China se están enviando a tu correo electrónico.
               </p>
             </div>
           </div>
 
           {/* MAIN TITLES */}
-          <h1 className="font-serif text-2xl sm:text-3xl md:text-5xl text-forest-dark text-center tracking-tight leading-tight mb-2 font-bold px-2">
-            Mapa de Digitopuntura + REGALO EXCLUSIVO: Guía de Gua Sha y Automasaje Facial
+          <h1 className="font-serif text-3xl sm:text-4xl md:text-[44px] text-[#09261a] text-center tracking-tight leading-[1.15] mb-5 font-bold px-2 max-w-2xl">
+            Antes de irte, completa tu kit práctico de herramientas
           </h1>
-          <p className="text-gold-dark italic font-semibold text-base sm:text-lg md:text-xl text-center mb-4 md:mb-6">
-            18 puntos ilustrados y regalo inmediato de automasaje facial con Gua Sha
+          
+          <p className="text-sm sm:text-base md:text-md text-gray-600 text-center max-w-2xl mx-auto mb-8 px-2 leading-relaxed">
+            Añade el <strong className="text-gray-900 font-semibold">Mapa Esencial de Puntos de Digitopuntura</strong> y recibe <strong className="text-emerald-800 font-semibold">dos guías complementarias exclusivas</strong> sin coste adicional.
           </p>
 
-          <p className="text-xs sm:text-sm md:text-base text-gray-600 leading-relaxed text-center max-w-2xl mx-auto mb-6 md:mb-10 px-2">
-            Complementa tu programa de Dietoterapia China con el <strong className="text-emerald-700">Mapa de Digitopuntura</strong> y llévate gratis, de regalo inmediato, la <strong className="text-[#09261a]">Guía de Gua Sha y Automasaje Facial</strong> (19 páginas). ¡Dos herramientas prácticas de Medicina Tradicional China para potenciar tu salud y belleza de forma natural!
+          {/* MAIN BUNDLE IMAGE */}
+          <div className="relative w-full max-w-md mx-auto mb-10 group rounded-2xl overflow-hidden shadow-2xl border-4 border-white transition-transform duration-500 hover:scale-[1.01] min-h-[220px] sm:min-h-[320px] flex items-center justify-center bg-sand-light/10" id="upsell-bundle-mockup-wrapper">
+            {!guashaImageLoaded && (
+              <div className="absolute inset-0 flex flex-col items-center justify-center bg-sand-light/40 rounded-2xl animate-pulse">
+                <div className="w-8 h-8 rounded-full border-4 border-emerald-300 border-t-emerald-600 animate-spin mb-2"></div>
+                <span className="text-[10px] font-mono text-emerald-800 tracking-wider">Cargando kit...</span>
+              </div>
+            )}
+            <picture className={`w-full transition-opacity duration-700 ease-in-out ${guashaImageLoaded ? "opacity-100" : "opacity-0"}`}>
+              <source srcSet={guashaImgAvif} type="image/avif" />
+              <source srcSet={guashaImgWebp} type="image/webp" />
+              <img 
+                src={guashaImgAvif} 
+                alt="Complete Acupressure & Gua Sha Toolkit" 
+                className="w-full h-auto object-cover"
+                referrerPolicy="no-referrer"
+                onLoad={() => setGuashaImageLoaded(true)}
+              />
+            </picture>
+          </div>
+
+          {/* 3 PRODUCT CARDS LIST */}
+          <div className="w-full space-y-6 mb-8 text-left">
+            
+            {/* Card 1 */}
+            <div className="bg-white rounded-2xl border border-[#e8e4d9] p-6 sm:p-8 shadow-sm">
+              <h3 className="font-serif text-lg sm:text-xl font-bold text-[#09261a] mb-3">
+                1. Mapa Esencial de Puntos de Digitopuntura
+              </h3>
+              <div className="space-y-3 text-xs sm:text-sm text-gray-600 leading-relaxed">
+                <p>
+                  <strong className="text-gray-900 font-bold">18 puntos ilustrados y seis secuencias prácticas</strong> organizadas en torno a los patrones cubiertos en tu Manual de Dietoterapia China.
+                </p>
+                <p>
+                  Consulta rápidamente la ubicación de los puntos, las funciones tradicionales y la guía de seguridad esencial sin depender de tu memoria.
+                </p>
+              </div>
+            </div>
+
+            {/* Card 2 */}
+            <div className="bg-white rounded-2xl border border-[#e8e4d9] p-6 sm:p-8 shadow-sm">
+              <h3 className="font-serif text-lg sm:text-xl font-bold text-[#09261a] mb-3">
+                2. REGALO GRATUITO: Guía de Gua Sha y Automasaje Facial
+              </h3>
+              <p className="text-xs sm:text-sm text-gray-600 leading-relaxed">
+                Una <strong className="text-gray-900 font-bold">guía ilustrada de 19 páginas</strong> que cubre técnicas fundamentales, seis zonas faciales, rutinas basadas en patrones e importantes precauciones.
+              </p>
+            </div>
+
+            {/* Card 3 */}
+            <div className="bg-white rounded-2xl border border-[#e8e4d9] p-6 sm:p-8 shadow-sm">
+              <h3 className="font-serif text-lg sm:text-xl font-bold text-[#09261a] mb-3">
+                3. REGALO GRATUITO: Protocolo de Dietoterapia China de 21 Días
+              </h3>
+              <div className="space-y-3.5 text-xs sm:text-sm text-gray-600 leading-relaxed">
+                <p>
+                  Una <strong className="text-gray-900 font-bold">guía de implementación completa de 150 páginas</strong> que incluye:
+                </p>
+                <ul className="space-y-2 mt-2">
+                  <li className="flex items-start gap-2">
+                    <span className="text-emerald-600 font-bold shrink-0">✔</span>
+                    <span>Planes de alimentación diarios para seis patrones tradicionales</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-emerald-600 font-bold shrink-0">✔</span>
+                    <span>Listas de la compra semanales y recetas prácticas</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-emerald-600 font-bold shrink-0">✔</span>
+                    <span>Adaptaciones para patrones combinados</span>
+                  </li>
+                  <li className="flex items-start gap-2">
+                    <span className="text-emerald-600 font-bold shrink-0">✔</span>
+                    <span>Hojas de seguimiento imprimibles y pautas de preparación</span>
+                  </li>
+                </ul>
+              </div>
+            </div>
+
+          </div>
+
+          {/* THEORY TO PRACTICAL APPLICATION BOX */}
+          <div className="w-full bg-[#fffdf5] border border-[#fdf0cd] rounded-2xl p-6 text-center mb-10 shadow-sm">
+            <h4 className="font-serif text-base sm:text-lg font-bold text-[#09261a] mb-2">
+              Pasa de la teoría a la aplicación práctica
+            </h4>
+            <p className="text-xs sm:text-sm text-gray-600 leading-relaxed max-w-2xl mx-auto">
+              Utiliza el manual principal para comprender el patrón, el Mapa de Digitopuntura para consultar los puntos complementarios y el Protocolo de 21 Días para organizar el plan dietético.
+            </p>
+          </div>
+
+          {/* HOTMART SALES FUNNEL FORM WRAPPER */}
+          <div className="w-full max-w-xl bg-white rounded-2xl border border-[#e8e4d9] p-6 sm:p-8 shadow-md text-center">
+            
+            <HotmartSalesFunnel />
+
+            <div className="flex items-center justify-center gap-2 mt-4 text-gray-400 text-[11px] sm:text-xs">
+              <span className="flex items-center gap-1.5">
+                🔒 Compra segura a través de Hotmart
+              </span>
+              <span className="text-gray-300">•</span>
+              <span className="flex items-center gap-1.5">
+                ⚡ Acceso inmediato
+              </span>
+            </div>
+
+          </div>
+
+          {/* DISCLAIMER */}
+          <p className="text-[10px] sm:text-[11px] text-gray-400 text-center mt-10 leading-relaxed max-w-2xl italic px-2">
+            *Material educativo que no sustituye al diagnóstico médico ni al asesoramiento personalizado de un profesional de la salud cualificado.*
           </p>
-
-          {/* MAIN PRODUCT: Digitopuncture Map */}
-          <div className="w-full max-w-xl bg-white rounded-3xl border border-sand-dark p-6 sm:p-8 shadow-xl mb-6 text-left">
-            <div className="inline-flex items-center gap-1 bg-emerald-700 text-white text-[10px] sm:text-xs font-black px-3 py-1 rounded-full uppercase tracking-widest mb-4">
-              COMPLEMENTO EXCLUSIVO
-            </div>
-            <h3 className="font-serif text-xl sm:text-2xl font-bold text-forest-dark mb-4 tracking-wide uppercase">
-              📍 Mapa de Digitopuntura
-            </h3>
-
-            {/* Main Book Mockup Image - MATCHES EXACTLY THE MAIN HERO LAYOUT AND SIZES */}
-            <div className="relative max-w-sm mx-auto mb-6 group rounded-2xl overflow-hidden shadow-xl border-4 border-gray-100 transition-transform duration-500 hover:scale-[1.01] min-h-[180px] sm:min-h-[260px] flex items-center justify-center bg-sand-light/10" id="upsell-book-mockup-wrapper">
-              {/* Elegant Skeleton Loader */}
-              {!protocolImageLoaded && (
-                <div className="absolute inset-0 flex flex-col items-center justify-center bg-sand-light/40 animate-pulse">
-                  <div className="w-8 h-8 rounded-full border-4 border-emerald-300 border-t-emerald-600 animate-spin mb-2"></div>
-                  <span className="text-[10px] font-mono text-emerald-800 tracking-wider">Cargando mapa...</span>
-                </div>
-              )}
-              <picture className={`w-full transition-opacity duration-700 ease-in-out ${protocolImageLoaded ? "opacity-100" : "opacity-0"}`}>
-                <source srcSet={protocolImgAvif} type="image/avif" />
-                <source srcSet={protocolImgWebp} type="image/webp" />
-                <img
-                  src={protocolImgPng}
-                  alt="Mapa de Digitopuntura"
-                  className="w-full h-auto object-cover"
-                  referrerPolicy="no-referrer"
-                  onLoad={() => setProtocolImageLoaded(true)}
-                />
-              </picture>
-            </div>
-
-            <div className="space-y-3.5 text-xs sm:text-sm text-gray-600">
-              <div className="flex items-start gap-2.5">
-                <span className="text-emerald-600 font-bold text-base shrink-0">✔</span>
-                <div>
-                  <strong className="text-forest-dark">Atlas Ilustrado de 18 Puntos:</strong> Con la ubicación exacta, función energética detallada y notas de seguridad completas para cada punto.
-                </div>
-              </div>
-              
-              <div className="flex items-start gap-2.5">
-                <span className="text-emerald-600 font-bold text-base shrink-0">✔</span>
-                <div>
-                  <strong className="text-forest-dark">6 Protocolos Completos:</strong> Uno por cada patrón de desequilibrio del manual principal, facilitando la estimulación directa desde afuera.
-                </div>
-              </div>
-
-              <div className="flex items-start gap-2.5">
-                <span className="text-emerald-600 font-bold text-base shrink-0">✔</span>
-                <div>
-                  <strong className="text-forest-dark">Alivio de Situaciones Agudas:</strong> Protocolos rápidos para dolor de cabeza, insomnio, ansiedad, náuseas, fatiga, cólico menstrual e inicio de resfriado.
-                </div>
-              </div>
-
-              <div className="flex items-start gap-2.5">
-                <span className="text-emerald-600 font-bold text-base shrink-0">✔</span>
-                <div>
-                  <strong className="text-forest-dark">Acceso Vitalicio Seguro:</strong> Formato digital descargable para siempre en tu móvil, tablet u ordenador.
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* Plus sign */}
-          <div className="flex flex-col items-center justify-center my-4">
-            <span className="text-4xl font-black text-emerald-600 animate-bounce">+</span>
-          </div>
-
-          {/* FREE GIFT: Gua Sha Guide Card */}
-          <div className="w-full max-w-xl bg-[#09261a] text-white rounded-3xl border-2 border-emerald-800/40 p-6 sm:p-8 shadow-2xl mb-8 text-left">
-            {/* BADGE */}
-            <div className="inline-flex items-center gap-1.5 bg-emerald-500 text-white text-[10px] sm:text-xs font-black px-3.5 py-1.5 rounded-full uppercase tracking-widest mb-4 shadow-sm animate-pulse">
-              <Sparkles className="w-3.5 h-3.5" /> ¡REGALO EXCLUSIVO INCLUIDO 100% GRATIS!
-            </div>
-
-            <h3 className="font-serif text-xl sm:text-2xl font-bold text-white mb-1.5 tracking-wide uppercase">
-              🌸 Guía de Gua Sha y Automasaje Facial
-            </h3>
-            <p className="text-xs sm:text-sm text-emerald-200/90 italic mb-6 font-medium">
-              19 páginas completas listas para descargar • Sin costo adicional
-            </p>
-
-            {/* Gua Sha Book Mockup Image */}
-            <div className="relative max-w-sm mx-auto mb-6 group rounded-2xl overflow-hidden shadow-xl border-4 border-emerald-900 transition-transform duration-500 hover:scale-[1.01] min-h-[180px] sm:min-h-[260px] flex items-center justify-center bg-emerald-950/20">
-              {!guashaImageLoaded && (
-                <div className="absolute inset-0 flex flex-col items-center justify-center bg-emerald-950/40 rounded-2xl animate-pulse">
-                  <div className="w-8 h-8 rounded-full border-4 border-emerald-300 border-t-emerald-600 animate-spin mb-2"></div>
-                  <span className="text-[10px] font-mono text-emerald-200 tracking-wider">Cargando regalo...</span>
-                </div>
-              )}
-              <picture className={`w-full transition-opacity duration-700 ease-in-out ${guashaImageLoaded ? "opacity-100" : "opacity-0"}`}>
-                <source srcSet={guashaImgAvif} type="image/avif" />
-                <source srcSet={guashaImgWebp} type="image/webp" />
-                <img 
-                  src={guashaImgAvif} 
-                  alt="Guía de Gua Sha y Automasaje Facial" 
-                  className="w-full h-auto object-cover"
-                  referrerPolicy="no-referrer"
-                  onLoad={() => setGuashaImageLoaded(true)}
-                />
-              </picture>
-            </div>
-
-            {/* Gua Sha Content List */}
-            <div className="space-y-3 text-xs sm:text-sm text-emerald-50/95">
-              <div className="flex items-start gap-2.5">
-                <span className="text-emerald-400 font-bold text-base shrink-0">✔</span>
-                <div>
-                  <strong className="text-white">Técnica Básica Completa:</strong> Ángulo exacto, presión y alternativas prácticas utilizando solo tus manos sin comprar nada.
-                </div>
-              </div>
-
-              <div className="flex items-start gap-2.5">
-                <span className="text-emerald-400 font-bold text-base shrink-0">✔</span>
-                <div>
-                  <strong className="text-white">Mapa Facial de 6 Zonas:</strong> Diagramas claros con dirección de deslizamiento para cuello, mandíbula, mejillas, ojos, frente y entrecejo.
-                </div>
-              </div>
-
-              <div className="flex items-start gap-2.5">
-                <span className="text-emerald-400 font-bold text-base shrink-0">✔</span>
-                <div>
-                  <strong className="text-white">6 Rutinas por Patrón:</strong> Bazo (desinflamante), Yang (calentadora), Yin (hidratante), Hígado (tensión mandibular), Humedad (drenaje) y Calor (rinfrescante).
-                </div>
-              </div>
-
-              <div className="flex items-start gap-2.5">
-                <span className="text-emerald-400 font-bold text-base shrink-0">✔</span>
-                <div>
-                  <strong className="text-white">Seguridad y Práctica:</strong> Contraindicaciones (acné, rellenos), errores a evitar, calendario semanal sugerido y diario de seguimiento.
-                </div>
-              </div>
-            </div>
-          </div>
-
-          {/* BUNDLE PRICE DROP BANNER */}
-          <div className="w-full max-w-md bg-emerald-50 border-2 border-emerald-200 rounded-3xl p-4 sm:p-5 text-center mb-6 shadow-md">
-            <p className="text-[10px] sm:text-xs text-emerald-700 uppercase tracking-widest font-extrabold mb-1 animate-pulse">
-              💥 ¡DOS MANUALES AL PRECIO DE UNO! 💥
-            </p>
-            <p className="text-[11px] text-emerald-800 font-semibold leading-relaxed">
-              Consigue el Mapa de Digitopuntura ahora y recibe de regalo exclusivo la Guía de Gua Sha Facial de forma inmediata. ¡Sin riesgos con nuestra garantía de reembolso al 100%!
-            </p>
-          </div>
-
-          {/* HOTMART - Sales Funnel Widget */}
-          <HotmartSalesFunnel />
-
-          {/* Secure purchase icons */}
-          <div className="flex flex-wrap items-center justify-center gap-3 md:gap-4 mt-6 text-gray-400 text-[10px] sm:text-[11px] md:text-xs">
-            <span className="flex items-center gap-1">
-              <ShieldCheck className="w-3.5 h-3.5 text-emerald-600" /> Compra 100% Segura
-            </span>
-            <span className="hidden sm:inline text-gray-300">•</span>
-            <span className="flex items-center gap-1">
-              <Download className="w-3.5 h-3.5 text-emerald-600" /> Descarga Inmediata
-            </span>
-          </div>
-
-
 
         </div>
 
         {/* COMPACT FOOTER */}
-        <footer className="bg-forest-dark text-gray-400 py-4 sm:py-6 text-center text-[11px] border-t border-forest-light/20 w-full mt-auto">
+        <footer className="bg-[#09261a] text-gray-400 py-4 sm:py-6 text-center text-[11px] border-t border-[#1b4b35]/20 w-full mt-auto">
           <p>© {new Date().getFullYear()} AcuSalud Academia. Todos los derechos reservados.</p>
         </footer>
 
@@ -1436,7 +1391,7 @@ export default function App() {
                   </div>
 
                   <div className="text-xs text-emerald-900 font-semibold bg-emerald-50/80 p-3 rounded-xl border border-emerald-150 leading-relaxed mt-2">
-                    💡 Todo lo necesario para orientar desde tu primera consulta.
+                    Todo lo necesario para orientar desde tu primera consulta.
                   </div>
                 </div>
 
