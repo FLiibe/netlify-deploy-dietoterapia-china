@@ -15,7 +15,6 @@ import {
   Lock,
   Wrench,
   AlertCircle,
-  X,
   CreditCard,
   Stethoscope,
   Printer,
@@ -287,7 +286,6 @@ export default function App() {
 
   // Live countdown timer state (starting from 10 minutes, 51 seconds like the original screenshot)
   const [timeLeft, setTimeLeft] = useState(651); // 10 minutes * 60 + 51 = 651 seconds
-  const [showUpsellModal, setShowUpsellModal] = useState(false);
   const [heroImageLoaded, setHeroImageLoaded] = useState(false);
   const [protocolImageLoaded, setProtocolImageLoaded] = useState(false);
   const [guashaImageLoaded, setGuashaImageLoaded] = useState(false);
@@ -1243,92 +1241,24 @@ export default function App() {
 
         <div className="max-w-6xl mx-auto relative z-10">
           
-          <div className="text-center mb-16">
+          <div className="text-center mb-12">
             <span className="inline-block bg-[#09261a] border border-gold-medium/40 text-gold-light text-[10px] md:text-xs font-mono uppercase tracking-[0.25em] px-4 py-1.5 rounded-full mb-4 shadow-xs">
               🔥 CONDICIONES EXCLUSIVAS DE LANZAMIENTO
             </span>
             <h3 className="font-serif text-3xl md:text-4xl lg:text-5xl text-gold-light tracking-tight font-medium leading-tight">
-              Elige tu plan
+              Acceso Completo
             </h3>
           </div>
 
-          {/* Pricing cards grid */}
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-10 items-stretch max-w-4xl mx-auto px-2 md:px-0" id="pricing-plans-grid">
-            
-            {/* PLAN BÁSICO CARD */}
-            <div className="bg-[#09261a] text-white rounded-3xl border border-forest-light/35 p-6 md:p-8 flex flex-col justify-between shadow-xl transition-all duration-300 hover:border-forest-light/60 text-left relative" id="plan-basico-card">
-              
-              <div>
-                {/* Header Badge */}
-                <div className="text-2xl md:text-3xl tracking-wider font-black text-white uppercase mb-6">
-                  PLAN BÁSICO
-                </div>
+          {/* Pricing card */}
+          <div className="max-w-xl mx-auto px-2 md:px-0" id="pricing-plans-grid">
 
-                {/* Features List */}
-                <div className="space-y-4 pt-4 border-t border-white/10">
-                  <div className="flex items-start gap-2.5 text-xs md:text-sm text-sand-light/95">
-                    <span className="text-emerald-400 shrink-0 mt-0.5">✔</span>
-                    <span>Manual Completo <strong>"Dietoterapia China"</strong></span>
-                  </div>
-                  <div className="flex items-start gap-2.5 text-xs md:text-sm text-white/30 line-through select-none">
-                    <span className="text-red-400/60 shrink-0 mt-0.5">❌</span>
-                    <span>Sin bonos exclusivos incluidos en el paquete</span>
-                  </div>
-                  <div className="flex items-start gap-2.5 text-xs md:text-sm text-white/30 line-through select-none">
-                    <span className="text-red-400/60 shrink-0 mt-0.5">❌</span>
-                    <span>Sin actualizaciones futuras gratuitas</span>
-                  </div>
-                  <div className="flex items-start gap-2.5 text-xs md:text-sm text-white/30 line-through select-none">
-                    <span className="text-red-400/60 shrink-0 mt-0.5">❌</span>
-                    <span>Sin soporte prioritario de dudas por correo electrónico</span>
-                  </div>
-                </div>
-
-                {/* Prices - Moved below Features List and centered */}
-                <div className="mt-4 mb-3 pt-4 border-t border-white/10 flex flex-col items-center justify-center text-center w-full" id="price-stack-basico">
-                  {/* Original Price */}
-                  <span className="text-sm md:text-base font-bold text-red-400 line-through tracking-tight mb-1">
-                    De {currency.symbol}{currency.basicoOriginal} por solo
-                  </span>
-                  {/* Current Price */}
-                  <div className="flex items-baseline justify-center gap-2">
-                    <span className="text-5xl md:text-6xl font-serif font-black tracking-tight text-white leading-none">
-                      {currency.symbol}{currency.basico}
-                    </span>
-                    {currency.code !== "USD" && (
-                      <span className="text-sm font-sans text-sand-dark/60">
-                        (~ $5 USD)
-                      </span>
-                    )}
-                  </div>
-                  {/* Bottom Label */}
-                  <span className="text-xs text-sand-dark/60 mt-2 font-medium tracking-wide">
-                    pago único ({currency.code})
-                  </span>
-                </div>
-              </div>
-
-              {/* Action Button */}
-              <div className="mt-4 pt-4 border-t border-white/10">
-                <button
-                  onClick={() => {
-                    setShowUpsellModal(true);
-                  }}
-                  className="block w-full py-4 rounded-xl bg-[#09261a] hover:bg-white hover:text-[#09261a] border-2 border-white text-white font-extrabold text-sm tracking-wider uppercase transition-all duration-300 hover:scale-[1.01] active:scale-[0.99] text-center cursor-pointer shadow-sm"
-                  id="checkout-plan-basico"
-                >
-                  Quiero el Plan Básico
-                </button>
-              </div>
-
-            </div>
-
-            {/* ACESSO COMPLETO CARD (RECOMMENDED) */}
-            <div className="bg-white text-gray-800 rounded-3xl border-4 border-gold-medium p-6 md:p-8 flex flex-col justify-between shadow-2xl relative transition-all duration-300 hover:shadow-gold-medium/15 text-left scale-100 lg:scale-[1.03] z-10" id="plan-completo-card">
+            {/* ACCESO COMPLETO CARD */}
+            <div className="bg-white text-gray-800 rounded-3xl border-4 border-gold-medium p-6 md:p-8 flex flex-col justify-between shadow-2xl relative transition-all duration-300 hover:shadow-gold-medium/15 text-left z-10" id="plan-completo-card">
               
               {/* Recommended Corner Ribbon / Badge */}
               <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 bg-gold-medium text-[#113827] px-3.5 py-1 rounded-full text-[10px] font-extrabold uppercase tracking-widest flex items-center gap-1 shadow-md border border-white whitespace-nowrap">
-                <span>🎗</span> RECOMENDADO
+                <span>🎗</span> PAQUETE COMPLETO CON 7 BONOS
               </div>
 
               <div>
@@ -1663,123 +1593,6 @@ export default function App() {
           © 2026 AcuSalud Academía • Medicina Tradicional China • Todos los derechos reservados.
         </p>
       </footer>
-
-
-      {/* ONE-TIME UPSELL POP-UP MODAL (HIGH-CONVERSION 50% OFF OFFER) */}
-      {showUpsellModal && (
-        <div className="fixed inset-0 bg-black/60 flex items-center justify-center z-50 p-4 backdrop-blur-xs" id="upsell-modal">
-          <div className="bg-white rounded-3xl border border-sand-dark w-full max-w-md overflow-y-auto max-h-[95vh] shadow-2xl relative animate-in fade-in zoom-in-95 duration-200 text-center p-5 md:p-6 flex flex-col items-center">
-            
-            {/* Top Close Button */}
-            <button
-              onClick={() => {
-                setShowUpsellModal(false);
-              }}
-              className="absolute top-3.5 right-3.5 text-gray-400 hover:text-gray-600 p-1.5 rounded-full hover:bg-gray-100 transition-colors cursor-pointer"
-              aria-label="Cerrar"
-            >
-              <X className="w-4 h-4" />
-            </button>
-
-            {/* Pill Tag */}
-            <div className="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-gradient-to-r from-emerald-700 to-[#113827] text-[10px] font-bold tracking-[0.15em] text-white uppercase mb-3 shadow-xs select-none">
-              <span>🔥</span> OFERTA ESPECIAL EXCLUSIVA
-            </div>
-
-            {/* Title */}
-            <h3 className="font-serif text-xl md:text-2xl text-forest-dark font-bold tracking-tight leading-snug px-2">
-              ¡Espera! Tenemos una Oportunidad Única Para Ti
-            </h3>
-
-            {/* Subtitle */}
-            <p className="text-xs text-gray-600 mt-2 max-w-sm px-2">
-              Haz upgrade al <strong className="text-forest-dark font-bold">Plan Completo</strong> ahora por solo{" "}
-              <span className="font-mono font-extrabold text-base text-emerald-800">{currency.symbol}{currency.upsell}</span>{" "}
-              {currency.code !== "USD" && (
-                <span className="text-xs text-emerald-800 font-bold">
-                  (~ $9.90 USD)
-                </span>
-              )}
-            </p>
-
-            {/* Feature Card */}
-            <div className="w-full bg-sand-light border border-sand-dark/80 rounded-2xl p-4 my-3.5 text-left shadow-xs">
-              <div className="text-[11px] font-extrabold text-forest-dark uppercase tracking-wider mb-2 flex items-center gap-1 select-none">
-                <span className="text-gold-medium animate-pulse">✨</span> Lo que ganas en Completo:
-              </div>
-              
-              <div className="space-y-1.5 text-[11px] md:text-xs text-gray-700 leading-normal">
-                <div className="flex items-start gap-1.5">
-                  <span className="text-emerald-600 font-bold shrink-0">✔</span>
-                  <span>Manual Completo <strong>"Dietoterapia China"</strong> (Acceso Vitalicio)</span>
-                </div>
-                <div className="flex items-start gap-1.5">
-                  <span className="text-emerald-600 font-bold shrink-0">✔</span>
-                  <span>Actualizaciones <strong>100% gratis</strong> de por vida</span>
-                </div>
-                <div className="flex items-start gap-1.5">
-                  <span className="text-emerald-600 font-bold shrink-0">✔</span>
-                  <span>Soporte prioritario de dudas por correo electrónico</span>
-                </div>
-                
-                <div className="pt-1.5 border-t border-sand-dark/60 mt-1.5 space-y-1.5">
-                  <div className="flex items-start gap-1.5 text-forest-medium font-medium">
-                    <span className="text-gold-medium font-bold shrink-0">✔</span>
-                    <span><strong>BONO 1:</strong> Tarjetas de Consulta Rápida (Síndromes y Alimentos)</span>
-                  </div>
-                  <div className="flex items-start gap-1.5 text-forest-medium font-medium">
-                    <span className="text-gold-medium font-bold shrink-0">✔</span>
-                    <span><strong>BONO 2:</strong> Guía de Recetas de la Medicina Tradicional China</span>
-                  </div>
-                  <div className="flex items-start gap-1.5 text-forest-medium font-medium">
-                    <span className="text-gold-medium font-bold shrink-0">✔</span>
-                    <span><strong>BONO 3:</strong> Calendario Estacional según los Cinco Movimientos</span>
-                  </div>
-                  <div className="flex items-start gap-1.5 text-forest-medium font-medium">
-                    <span className="text-gold-medium font-bold shrink-0">✔</span>
-                    <span><strong>BONO 4:</strong> Plantillas de Anamnesis y Seguimiento Nutricional</span>
-                  </div>
-                  <div className="flex items-start gap-1.5 text-forest-medium font-medium">
-                    <span className="text-gold-medium font-bold shrink-0">✔</span>
-                    <span><strong>BONO 5:</strong> Recetario de Caldos y Fondos Terapéuticos</span>
-                  </div>
-                  <div className="flex items-start gap-1.5 text-forest-medium font-medium">
-                    <span className="text-gold-medium font-bold shrink-0">✔</span>
-                    <span><strong>BONO 6:</strong> Atlas de Diagnóstico Clínico por la Lengua</span>
-                  </div>
-                  <div className="flex items-start gap-1.5 text-forest-medium font-medium">
-                    <span className="text-gold-medium font-bold shrink-0">✔</span>
-                    <span><strong>BONO 7:</strong> Combinaciones Alimentarias a Evitar en MTC</span>
-                  </div>
-                </div>
-              </div>
-            </div>
-
-            {/* Upgrade CTA Button */}
-            <button
-              onClick={() => {
-                setShowUpsellModal(false);
-                window.open("https://pay.hotmart.com/O106596188M?off=f2t2uhel&checkoutMode=10", "_blank");
-              }}
-              className="w-full mt-2 py-3 rounded-xl bg-gradient-to-r from-emerald-700 to-[#c59f5b] hover:from-emerald-800 hover:to-[#dfc28d] text-white font-extrabold text-xs tracking-wider uppercase transition-all duration-300 transform hover:scale-[1.01] active:scale-[0.99] shadow-md hover:shadow-emerald-900/10 text-center cursor-pointer"
-            >
-              ¡SÍ! QUIERO EL PLAN COMPLETO POR {currency.symbol}{currency.upsell}
-            </button>
-
-            {/* Decline Link Button */}
-            <button
-              onClick={() => {
-                setShowUpsellModal(false);
-                window.open("https://pay.hotmart.com/P106596280S?checkoutMode=10", "_blank");
-              }}
-              className="w-full mt-2 py-2 rounded-xl border border-sand-dark/60 hover:bg-gray-50 text-gray-500 font-semibold text-xs tracking-wide transition-colors text-center cursor-pointer"
-            >
-              No, continuar con el Básico ({currency.symbol}{currency.basico})
-            </button>
-
-          </div>
-        </div>
-      )}
 
     </div>
   );
